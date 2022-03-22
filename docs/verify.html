@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Dashboard - Submit Form</title>
+        <title>Dashboard - Verify Form</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
@@ -29,7 +29,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="submit.html">Submit Form</a></li>
+                        <li><a class="dropdown-item" href="submit.html">Verify Form</a></li>
                         <li><hr class="dropdown-divider" /></li>
                         <li><a class="dropdown-item" href="#!">Logout</a></li>
                     </ul>
@@ -96,9 +96,9 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Transaction Submit From</h1>
+                        <h1 class="mt-4">Transaction Verify From</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Transaction Submit From</li>
+                            <li class="breadcrumb-item active">Transaction Verify From</li>
                         </ol>
 
                         <div class="card mb-4">
@@ -110,12 +110,12 @@
                             
 			    <form>
 			      <div class="form-group">
-			        <label for="exampleInputEmail1">Transaction Tag</label>
-				<p><input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Transaction Tag">
+			        <label for="exampleInputEmail1">Transaction Hash</label>
+				<p><input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Transaction Hash">
 			      </div>
 			      <div class="form-group">
-				<label for="exampleInputEmail1">Transaction Message</label>
-				<p><input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Transaction Message">
+				<label for="exampleInputEmail1">Public key</label>
+				<p><input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Public key">
 			      </div>
 			      <button type="submit" class="btn btn-primary">Submit</button>
 			    </form>
@@ -134,8 +134,7 @@
                           <div class="card-body">
 		            <code>                          
 			      {
-			        "messageID": "54543f822360044239fb0756615s875d4d618f2d2r0424bbd2c167b351661933",
-				"explorer": "https://explorer.iota.org/mainnet/message/w4523f822160044239rb0756615a875d4a618f2d2d0424dbd2c167b351661933"
+			        "verify": "OK"
 		              }
 			    </code>
                           </div>
