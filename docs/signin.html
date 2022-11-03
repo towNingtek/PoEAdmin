@@ -5,10 +5,39 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-
-
-
     <link href="static/css/signin.css" rel="stylesheet" id="bootstrap-css">
+
+    <script>
+      $(function () {
+        $("#submit_login").on("click", function(e){
+          var dataJSON = {};
+          dataJSON.username = document.getElementById("username").value;
+          dataJSON.password = document.getElementById("password").value;
+          
+          alert(JSON.stringify(dataJSON))
+          
+          $.ajax({
+            url: "https://poe.townway.com.tw/accounts/signin",
+            type: "POST",
+            async: false,
+            crossDomain: true,
+            // contentType: "application/json",
+            // dataType: 'json',
+            data:  dataJSON,
+            success: function(returnData) {
+              // const obj = JSON.parse(returnData);
+              // window.location.replace("dashboard.html");
+              alert("returnData")
+              alert(returnData)
+            },
+            error: function(xhr, ajaxOptions, thrownError){
+              alert(thrownError);
+            }
+          });
+      });
+    })
+    </script>
+
   </head>
   <body> 
     <div class="wrapper fadeInDown">
@@ -17,10 +46,10 @@
           <img src="static/imgs/signin.svg" id="icon" alt="User Icon" width="50px" height="50px"/>
         </div>
 
-	<form action="dashboard.html">
-          <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-          <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-          <input type="submit" class="fadeIn fourth" value="Log In">
+	      <form id="signin-form">
+          <input type="text" id="username" class="fadeIn second" name="username" placeholder="username">
+          <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
+          <input type="button" id="submit_login" class="fadeIn fourth" value="Log In">
         </form>
 
         <div id="formFooter">
