@@ -14,8 +14,6 @@
           dataJSON.name = document.getElementById("username").value;
           dataJSON.password = document.getElementById("password").value;
           
-          alert(JSON.stringify(dataJSON))
-          
           $.ajax({
             url: "https://geo.townway.com.tw/accounts/signin",
             type: "POST",
@@ -23,17 +21,16 @@
             crossDomain: true,
             contentType: "application/json",
             // dataType: 'json',
-            data:  dataJSON,
+            data:  JSON.stringify(dataJSON),
             success: function(returnData) {
               // const obj = JSON.parse(returnData);
-              // window.location.replace("dashboard.html");
-              alert("returnData")
-              alert(returnData)
+              window.location.replace("dashboard.html");
             },
             error: function(xhr, ajaxOptions, thrownError){
-              alert(thrownError);
+              console.log(thrownError);
             }
           });
+
       });
     })
     </script>
