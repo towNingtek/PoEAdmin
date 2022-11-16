@@ -11,7 +11,7 @@
       $(function () {
         $("#submit_login").on("click", function(e){
           var dataJSON = {};
-          dataJSON.username = document.getElementById("username").value;
+          dataJSON.name = document.getElementById("username").value;
           dataJSON.password = document.getElementById("password").value;
           
           alert(JSON.stringify(dataJSON))
@@ -21,7 +21,7 @@
             type: "POST",
             async: false,
             crossDomain: true,
-            // contentType: "application/json",
+            contentType: "application/json",
             // dataType: 'json',
             data:  dataJSON,
             success: function(returnData) {
