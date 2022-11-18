@@ -7,9 +7,11 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Dashboard - Submit Form</title>
-        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+	<script src="js/action.js"></script>
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -103,19 +105,19 @@
 
                         <div class="card mb-4">
                             <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                               Settings 
+                              <i class="fas fa-table me-1"></i>
+                              Transaction Field   
                             </div>
                             <div class="card-body">
                             
 			    <form>
 			      <div class="form-group">
-			        <label for="exampleInputEmail1">Transaction Tag</label>
-				<p><input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Transaction Tag">
+			        <label for="TransactionTag">Transaction Tag</label>
+				<p><input type="text" class="form-control" id="TransactionTag" aria-describedby="Transaction Tag" placeholder="Transaction Tag">
 			      </div>
 			      <div class="form-group">
-				<label for="exampleInputEmail1">Transaction Message</label>
-				<p><input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Transaction Message">
+				<label for="TransactionMsg">Transaction Message</label>
+				<p><input type="text" class="form-control" id="TransactionMsg" aria-describedby="Transaction Message" placeholder="Transaction Message">
 			      </div>
 			      <button type="submit" class="btn btn-primary">Submit</button>
 			    </form>
@@ -132,11 +134,13 @@
                               Response 
                           </div>
                           <div class="card-body">
-		            <code>                          
+		            <code id="sendResponse"> 
+			     <!--
 			      {
 			        "messageID": "54543f822360044239fb0756615s875d4d618f2d2r0424bbd2c167b351661933",
 				"explorer": "https://explorer.iota.org/mainnet/message/w4523f822160044239rb0756615a875d4a618f2d2d0424dbd2c167b351661933"
 		              }
+			      -->
 			    </code>
                           </div>
                       </div> <!-- row -->

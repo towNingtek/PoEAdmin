@@ -23,8 +23,11 @@
             // dataType: 'json',
             data:  JSON.stringify(dataJSON),
             success: function(returnData) {
-              // const obj = JSON.parse(returnData);
-              window.location.replace("dashboard.html");
+              const obj = JSON.parse(returnData);
+              if (obj.status == "OK")
+  	        window.location.replace("dashboard.html");
+	      else
+	        alert("Auth fail");
             },
             error: function(xhr, ajaxOptions, thrownError){
               console.log(thrownError);
@@ -43,9 +46,9 @@
           <img src="static/imgs/signin.svg" id="icon" alt="User Icon" width="50px" height="50px"/>
         </div>
 
-	      <form id="signin-form">
+        <form id="signin-form">
           <input type="text" id="username" class="fadeIn second" name="username" placeholder="username">
-          <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
+          <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
           <input type="button" id="submit_login" class="fadeIn fourth" value="Log In">
         </form>
 
