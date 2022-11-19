@@ -2,7 +2,6 @@ function txn_read() {
   var dataJSON = {};
   var resultData = {};
 
-  dataJSON.message = msg; 
   $.ajax({
     url: "https://geo.townway.com.tw/txn/list",
     type: "POST",
