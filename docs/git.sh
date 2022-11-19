@@ -1,1 +1,1 @@
-git add . ; git commit --amend -m "feat: add auth fail message" ; git push -f
+git add . ; git commit -m "feat: add dashboard init function" ; git push
