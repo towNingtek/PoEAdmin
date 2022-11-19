@@ -5,6 +5,10 @@ function init() {
 
   if (page == "dashboard.html") {
     alert("dashboard")
+
+    var list_txns = txn_read();
+    alert(JSON.stringify(list_txns));
+
   }
 
 }
