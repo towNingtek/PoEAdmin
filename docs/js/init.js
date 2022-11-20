@@ -15,20 +15,19 @@ function init() {
       console.log(list_txns[index].hash);
 
       var obj_tr = document.createElement("tr");
-      // var obj_td_id = 
-      document.createElement("td").innerHTML = index;
+      var obj_td_id = document.createElement("td");
       var obj_td_timestamp = document.createElement("td");
       var obj_td_txn_hash = document.createElement("td");
       var obj_td_sig = document.createElement("td");
       var obj_td_tag = document.createElement("td");
       var obj_td_none = document.createElement("td");
 
-      // obj_td_id.innerHTML = "1";
-      obj_td_timestamp.innerHTML = "1";
-      obj_td_txn_hash.innerHTML = "1";
-      obj_td_sig.innerHTML = "1";
-      obj_td_tag.innerHTML = "1";
-      obj_td_none.innerHTML = "1";
+      obj_td_id.innerHTML = index;
+      obj_td_timestamp.innerHTML = list_txns[index].createdAt;
+      obj_td_txn_hash.innerHTML = list_txns[index].hash;
+      obj_td_sig.innerHTML = list_txns[index].hash;
+      obj_td_tag.innerHTML = list_txns[index].hash;
+      obj_td_none.innerHTML = "";
 
       obj_tr.append(obj_td_id);
       obj_tr.append(obj_td_timestamp);
