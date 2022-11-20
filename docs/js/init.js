@@ -6,7 +6,7 @@ function init() {
   if (page == "dashboard.html") {
     alert("dashboard")
 
-    var list_txns = txn_read();
+    var list_txns = JSON.parse(txn_read());
     alert(typeof(list_txns));
     alert(JSON.stringify(list_txns));
 
