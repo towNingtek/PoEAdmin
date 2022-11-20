@@ -7,6 +7,7 @@ function init() {
     alert("dashboard")
 
     var list_txns = txn_read();
+    alert(typeof(list_txns));
     alert(JSON.stringify(list_txns));
 
     var obj_txn_tbody = document.getElementById("txn_tbody");
