@@ -15,7 +15,7 @@ function init() {
       console.log(list_txns[index].hash);
 
       var obj_tr = document.createElement("tr");
-      var obj_td_id = document.createElement("td").innerHTML = list_txns[index].index;
+      var obj_td_id = document.createElement("td").innerHTML = index;
       var obj_td_timestamp = document.createElement("td");
       var obj_td_txn_hash = document.createElement("td");
       var obj_td_sig = document.createElement("td");
