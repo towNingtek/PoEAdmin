@@ -1,5 +1,3 @@
-const { doc } = require("prettier");
-
 function init() {
   // Get path
   var path = window.location.pathname;
