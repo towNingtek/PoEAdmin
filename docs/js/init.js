@@ -4,16 +4,10 @@ function init() {
   var page = path.split("/").pop();
 
   if (page == "dashboard.html") {
-    alert("dashboard")
-
     var list_txns = JSON.parse(txn_read());
-    alert(typeof(list_txns));
-    alert(JSON.stringify(list_txns));
-
     var obj_txn_tbody = document.getElementById("txn_tbody");
     for (var index=0; index<list_txns.length; index++) {
-      console.log(list_txns[index].hash);
-
+      
       var obj_tr = document.createElement("tr");
       var obj_td_id = document.createElement("td");
       var obj_td_timestamp = document.createElement("td");
