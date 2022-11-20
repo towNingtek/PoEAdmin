@@ -12,9 +12,7 @@ function init() {
 
     var obj_txn_tbody = document.getElementById("txn_tbody");
     for (var index=0; index<list_txns.length; index++) {
-      console.log(list_txns[index]);
-      var obj_txn = JSON.parse(list_txns[index]); 
-      console.log(JSON.stringify(obj_txn));
+      console.log(list_txns[index].hash);
     }
 
     var obj_tr = document.createElement("tr");
