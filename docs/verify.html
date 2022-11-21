@@ -7,9 +7,11 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Dashboard - Verify Form</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+        <script src="js/verify.js"></script>
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -58,7 +60,6 @@
                                     <a class="nav-link" href="dashboard.html">TxN List</a>
                                 </nav>
                             </div>
-
 
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
@@ -132,10 +133,10 @@
                               Response 
                           </div>
                           <div class="card-body">
-		            <code>                          
-			      {
+		            <code id="verifyResponse">                          
+			        {
 			        "verify": "OK"
-		              }
+		            }
 			    </code>
                           </div>
                       </div> <!-- row -->
