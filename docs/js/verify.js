@@ -23,6 +23,8 @@ function txn_verify() {
 $(function () {
     $("form").on("submit", function(e){
       e.preventDefault();
+
+      alert("verify!");
       
       /* var tag = document.getElementById("TransactionTag").value;
       var msg = document.getElementById("TransactionMsg").value; */
