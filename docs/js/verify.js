@@ -1,6 +1,10 @@
-function txn_verify() {
+function txn_verify(data, pub, sig) {
   var dataJSON = {};
   var resultData = {};
+
+  dataJSON.data;
+  dataJSON.pub;
+  dataJSON.sig;
 
   $.ajax({
     url: "https://geo.townway.com.tw/txn/verify",
@@ -26,10 +30,11 @@ $(function () {
 
       alert("verify!");
       
-      /* var tag = document.getElementById("TransactionTag").value;
-      var msg = document.getElementById("TransactionMsg").value; */
+      var data = document.getElementById("data").value;
+      var pub = document.getElementById("pub").value;
+      var sig = document.getElementById("sig").value;
 
-      var response = txn_verify();
-      document.getElementById("verifyResponse").innerHTML = response;
+      var response = txn_verify(data, pub, sig);
+      document.getElementById("verifyResponse").innerHTML = response.status;
     });
 });
