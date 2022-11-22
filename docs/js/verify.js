@@ -12,6 +12,7 @@ function txn_verify(data, pub, sig) {
     async: false,
     crossDomain: true,
     contentType: "application/json",
+    headers : {"Authorization":"Basic Z2VvOjJ1bGlkZ29v"},
     data: JSON.stringify(dataJSON),
     success: function(returnData) {
       // const obj = JSON.parse(returnData);
