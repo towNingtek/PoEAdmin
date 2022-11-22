@@ -7,7 +7,7 @@ function txn_verify(data, pub, sig) {
   dataJSON.sig;
 
   $.ajax({
-    url: "https://poe.townway.com.tw/credentials/verify",
+    url: "https://geo.townway.com.tw/credentials/verify",
     type: "POST",
     async: false,
     crossDomain: true,
