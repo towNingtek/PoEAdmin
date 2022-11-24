@@ -16,7 +16,7 @@ function txn_verify(data, pub, sig) {
     data: JSON.stringify(dataJSON),
     success: function(returnData) {
       // const obj = JSON.parse(returnData);
-      resultData = JSON.parse(returnData);
+      resultData = returnData;
     },
       error: function(xhr, ajaxOptions, thrownError){
       console.log(thrownError);
@@ -33,9 +33,9 @@ $(function () {
       var pub = document.getElementById("pub").value;
       var sig = document.getElementById("sig").value;
 
-      alert(data);
       var response = txn_verify(data, pub, sig);
-      alert(JSON.stringify(response));
+      alert(response);
+      response = JSON.parse(response);
       document.getElementById("verifyResponse").innerHTML = response.status;
     });
 });
