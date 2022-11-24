@@ -33,6 +33,7 @@ $(function () {
       var pub = document.getElementById("pub").value;
       var sig = document.getElementById("sig").value;
 
+      alert(data);
       var response = txn_verify(data, pub, sig);
       alert(JSON.stringify(response));
       document.getElementById("verifyResponse").innerHTML = response.status;
