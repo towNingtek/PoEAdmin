@@ -1,6 +1,6 @@
 function txn_verify(data, pub, sig) {
   var dataJSON = {};
-  var resultData = {};
+  var resultData = "";
 
   dataJSON.data = data;
   dataJSON.pub = pub;
