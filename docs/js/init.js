@@ -18,7 +18,7 @@ function init() {
 
       obj_td_id.innerHTML = index;
       obj_td_timestamp.innerHTML = list_txns[index].createdAt;
-      obj_td_txn_hash.innerHTML = list_txns[index].hash;
+      obj_td_txn_hash.innerHTML = "<a href='https://explorer.iota.org/mainnet/message/"+list_txns[index].hash + "'>" + list_txns[index].hash + "</a>";
       obj_td_sig.innerHTML = list_txns[index].hash;
       obj_td_tag.innerHTML = list_txns[index].hash;
       obj_td_none.innerHTML = "";
