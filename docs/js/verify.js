@@ -34,8 +34,11 @@ $(function () {
       var sig = document.getElementById("sig").value;
 
       var response = txn_verify(data, pub, sig);
-      alert(response);
-      // response = JSON.parse(response);
-      document.getElementById("verifyResponse").innerHTML = response.status;
-    });
+
+      if (response.status == False) {
+        document.getElementById("verifyResponse").innerHTML = "verified failed.";
+      } else {
+        document.getElementById("verifyResponse").innerHTML = "verified successed."
+      }
+      });
 });
