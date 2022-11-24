@@ -35,7 +35,7 @@ $(function () {
 
       var response = txn_verify(data, pub, sig);
 
-      if (response.status == False) {
+      if (response.status == false) {
         document.getElementById("verifyResponse").innerHTML = "verified failed.";
       } else {
         document.getElementById("verifyResponse").innerHTML = "verified successed."
