@@ -2,9 +2,9 @@ function txn_verify(data, pub, sig) {
   var dataJSON = {};
   var resultData = {};
 
-  dataJSON.data;
-  dataJSON.pub;
-  dataJSON.sig;
+  dataJSON.data = data;
+  dataJSON.pub = pub;
+  dataJSON.sig = sig;
 
   $.ajax({
     url: "https://poe.townway.com.tw/credentials/verify",
