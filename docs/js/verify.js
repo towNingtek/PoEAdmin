@@ -35,7 +35,7 @@ $(function () {
 
       var response = txn_verify(data, pub, sig);
       alert(response);
-      response = JSON.parse(response);
+      // response = JSON.parse(response);
       document.getElementById("verifyResponse").innerHTML = response.status;
     });
 });
