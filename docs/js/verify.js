@@ -16,7 +16,7 @@ function txn_verify(data, pub, sig) {
     data: JSON.stringify(dataJSON),
     success: function(returnData) {
       // const obj = JSON.parse(returnData);
-      resultData = returnData;
+      resultData = JSON.parse(returnData);
     },
       error: function(xhr, ajaxOptions, thrownError){
       console.log(thrownError);
