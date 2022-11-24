@@ -6,15 +6,13 @@ function txn_verify(data, pub, sig) {
   dataJSON.pub = pub;
   dataJSON.sig = sig;
 
-  alert(dataJSON.pub);
-
   $.ajax({
-    url: "https://poe.townway.com.tw/credentials/verify",
+    url: "https://geo.townway.com.tw/credentials/verify",
     type: "POST",
     async: false,
     crossDomain: true,
     contentType: "application/json",
-    headers : {"Authorization":"Basic Z2VvOjJ1bGlkZ29v"},
+    // headers : {"Authorization":"Basic Z2VvOjJ1bGlkZ29v"},
     data: JSON.stringify(dataJSON),
     success: function(returnData) {
       // const obj = JSON.parse(returnData);
