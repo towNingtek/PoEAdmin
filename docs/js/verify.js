@@ -28,14 +28,13 @@ function txn_verify(data, pub, sig) {
 $(function () {
     $("form").on("submit", function(e){
       e.preventDefault();
-
-      alert("verify!");
       
       var data = document.getElementById("data").value;
       var pub = document.getElementById("pub").value;
       var sig = document.getElementById("sig").value;
 
       var response = txn_verify(data, pub, sig);
+      alert(JSON.stringify(response));
       document.getElementById("verifyResponse").innerHTML = response.status;
     });
 });
