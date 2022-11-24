@@ -30,7 +30,8 @@ $(function () {
       e.preventDefault();
       
       var data = document.getElementById("data").value;
-      var pub = document.getElementById("pub").value;
+      var pub = "-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC7uxA9x5o41by9bAE3bBV/VB8i\nhTIPnusY7dy7ZnuY6oDWUa8SZDpoJ/WZPqTiunScrsRmm3hADQ6kuv9zQAyaTO0+\nzpqE0KCP5DSxmrbd9c+uRd7K0W1i0qbNwmmrSViB9pVSnuLC+F8Fdzh12Kyctwro\n+7jtenUcPfeiQ28+twIDAQAB\n-----END PUBLIC KEY-----";
+      // document.getElementById("pub").value;
       var sig = document.getElementById("sig").value;
 
       var response = txn_verify(data, pub, sig);
