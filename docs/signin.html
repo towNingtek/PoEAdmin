@@ -11,7 +11,7 @@
       $(function () {
         $("#submit_login").on("click", function(e){
           var dataJSON = {};
-          dataJSON.name = document.getElementById("username").value;
+          dataJSON.username = document.getElementById("username").value;
           dataJSON.password = document.getElementById("password").value;
           
           $.ajax({
