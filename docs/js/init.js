@@ -1,10 +1,41 @@
+function checkPermission() {
+  var jwt = getLocalStorage("jwt");
+  var dataJSON = {};
+  dataJSON.jwt = jwt;
+
+  var resultData = {};
+
+  $.ajax({
+    url: "https://geo.townway.com.tw/jwt/verify",
+    type: "POST",
+    async: false,
+    crossDomain: true,
+    contentType: "application/json",
+    data: JSON.stringify(dataJSON),
+    success: function(returnData) {
+      // const obj = JSON.parse(returnData);
+      resultData = JSON.parse(returnData);
+    },
+      error: function(xhr, ajaxOptions, thrownError){
+      console.log(thrownError);
+    }
+  });
+  return resultData;
+
+}
+
 function init() {
   // Get path
   var path = window.location.pathname;
   var page = path.split("/").pop();
 
   if (page == "dashboard.html") {
-    
+    /*
+    if (checkPermission == false) {
+      alert("no permission!");
+    }
+    */
+
     var list_txns = txn_read();
     var obj_txn_tbody = document.getElementById("txn_tbody");
     for (var index=0; index<list_txns.length; index++) {
