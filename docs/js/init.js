@@ -32,7 +32,8 @@ function init() {
   if (page == "dashboard.html") {
     var permission = checkPermission()
     if (permission.status == false) {
-      alert("no permission!");
+      window.location.replace("/signin.html");
+      // alert("no permission!");
     }
 
     var list_txns = txn_read();
