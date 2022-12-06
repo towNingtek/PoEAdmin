@@ -6,6 +6,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
     <link href="static/css/signin.css" rel="stylesheet" id="bootstrap-css">
+    <script src="js/localStorage.js"></script>
 
     <script>
       $(function () {
@@ -24,10 +25,12 @@
             data:  JSON.stringify(dataJSON),
             success: function(returnData) {
               const obj = JSON.parse(returnData);
-              if (obj.status == "OK")
+	      if (obj.status == "OK") {
+		setLocalStorage("jwt", obj.key);
   	        window.location.replace("dashboard.html");
-	      else
+	      } else {
 	        alert("Auth fail");
+	      }
             },
             error: function(xhr, ajaxOptions, thrownError){
               console.log(thrownError);
