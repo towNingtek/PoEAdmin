@@ -32,7 +32,7 @@ function init() {
   if (page == "dashboard.html") {
     var permission = checkPermission()
     if (permission.status == false) {
-      window.location.replace("/signin.html");
+      window.location.replace("/PoEAdmin/signin.html");
       // alert("no permission!");
     }
 
