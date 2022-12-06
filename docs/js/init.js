@@ -30,11 +30,10 @@ function init() {
   var page = path.split("/").pop();
 
   if (page == "dashboard.html") {
-    /*
-    if (checkPermission == false) {
+    var permission = checkPermission()
+    if (permission.status == false) {
       alert("no permission!");
     }
-    */
 
     var list_txns = txn_read();
     var obj_txn_tbody = document.getElementById("txn_tbody");
