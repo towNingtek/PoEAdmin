@@ -47,10 +47,14 @@ $(function () {
     $("form").on("submit", function(e){
       e.preventDefault();
       
-      var tag = document.getElementById("TransactionTag").value;
       var msg = document.getElementById("TransactionMsg").value;
 
       var response = txn_send(msg);
       document.getElementById("sendResponse").innerHTML = response;
     });
 });
+
+function logout(){
+  setLocalStorage("jwt", "");
+  window.location.replace("/PoEAdmin/index.html");
+}

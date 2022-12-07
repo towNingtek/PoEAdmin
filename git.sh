@@ -1,1 +1,1 @@
-git add . ; git commit -m "feat: verify page" ; git push
+git add . ; git commit --amend -m "feat: permission" ; git push -f

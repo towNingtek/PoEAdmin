@@ -25,12 +25,12 @@
             data:  JSON.stringify(dataJSON),
             success: function(returnData) {
               const obj = JSON.parse(returnData);
-	      if (obj.status == "OK") {
-		setLocalStorage("jwt", obj.key);
-  	        window.location.replace("dashboard.html");
-	      } else {
-	        alert("Auth fail");
-	      }
+              if (obj.status == "OK") {
+                  setLocalStorage("jwt", obj.key);
+                  window.location.replace("dashboard.html");
+              } else {
+                alert("Auth fail");
+              }
             },
             error: function(xhr, ajaxOptions, thrownError){
               console.log(thrownError);
@@ -56,7 +56,7 @@
         </form>
 
         <div id="formFooter">
-          <a class="underlineHover" href="#">Forgot Password?</a>
+          <!--<a class="underlineHover" href="#">Forgot Password?</a>-->
         </div>
       </div>
     </div>

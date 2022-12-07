@@ -29,7 +29,7 @@ function init() {
   var path = window.location.pathname;
   var page = path.split("/").pop();
 
-  if (page == "dashboard.html") {
+  if (page == "dashboard.html" || page == "submit.html" || page == "verify.html") {
     var permission = checkPermission()
     if (permission.status == false) {
       window.location.replace("/PoEAdmin/signin.html");
