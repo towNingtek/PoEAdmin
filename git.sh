@@ -1,1 +1,1 @@
-git add . ; git commit --amend -m "feat: permission" ; git push -f
+git add . ; git commit -m "fix: revise API link" ; git push
