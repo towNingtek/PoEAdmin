@@ -1,1 +1,1 @@
-git add . ; git commit -m "doc: revise README" ; git push
+git add . ; git commit -m "fix: revise verify function" ; git push
