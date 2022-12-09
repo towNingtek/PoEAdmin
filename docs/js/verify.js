@@ -37,9 +37,9 @@ $(function () {
     var response = txn_verify(data, pub, sig);
 
     if (response.status == false) {
-      document.getElementById("verifyResponse").innerHTML = "verified failed.";
+      document.getElementById("verifyResponse").innerHTML = "verification failed.";
     } else {
-      document.getElementById("verifyResponse").innerHTML = "verified successed."
+      document.getElementById("verifyResponse").innerHTML = "verification succeeded."
     }
   });
 });

@@ -1,1 +1,1 @@
-git add . ; git commit -m "fix: revise verify function" ; git push
+git add . ; git commit --amend -m "fix: revise wording" ; git push -f
