@@ -1,1 +1,1 @@
-git add . ; git commit --amend -m "fix: revise wording" ; git push -f
+git add . ; git commit -m "fix: comment monitor hyperlink" ; git push
