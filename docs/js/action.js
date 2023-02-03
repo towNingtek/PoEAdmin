@@ -17,6 +17,7 @@ function txn_read() {
       console.log(thrownError);
     }
   });
+
   return resultData;
 }
 
